@@ -8,16 +8,56 @@
  */
 public class Vehicle {
 	
-	private int numWheels = 4;
-	private int numDoors= 2;
-	private String color = "";
-	private String make = "";
-	private String model = "";
-	private String year = "";
-	private float speed = 0;
-	private final  int MAX_SPEED = 40;
+	protected int numWheels = 4;
+	protected int numDoors= 2;
+	protected String color = "";
+	protected String make = "";
+	protected String model = "";
+	protected String year = "";
+	protected float speed = 0;
+	protected final  int MAX_SPEED = 40;
+	
+	
+	public int getNumWheels() {
+		return this.numWheels;
+	}
+	public int getNumDoors() {
+		return this.numDoors;
+	}
+	public String getColor() {
+		return this.color;
+	}
+	public String getMake() {
+		return this.make;
+	}
+	public String getYear() {
+		return this.year;
+	}
+	public String getModel() {
+		return this.model;
+	}
+	
 		
-	public Vehicle(){
+	public Vehicle(int wheels, int doors, String color, String make, String model,String year){
+		
+		this.numWheels = wheels;
+		this.numDoors = doors;
+		this.color = color;
+		this.make = make;
+		this.model = model;
+		this.year = year;
+		
+		
+		
+	}
+public Vehicle(String color, String make, String model,String year){
+		
+		this.color = color;
+		this.make = make;
+		this.model = model;
+		this.year = year;
+		
+		
 		
 	}
 	
@@ -47,26 +87,9 @@ public class Vehicle {
 		System.out.println("Turning Right");
 		
 	}
-
-	public int getNumWheels() {
-		return this.numWheels;
-	}
-	public int getNumDoors() {
-		return this.numDoors;
-	}
-	public String getColor() {
-		return this.color;
-	}
-	public String getMake() {
-		return this.make;
-	}
-	public String getYear() {
-		return this.year;
-	}
-	public String getModel() {
-		return this.model;
-	}
 	public float getspeed() {
 		return this.speed;
 	}
-}
+
+
+	}
